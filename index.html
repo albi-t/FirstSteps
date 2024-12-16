@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Website</title>
+  <title>Recipe Matcher</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>This is the start of something amazing.</p>
-  <button onclick="showMessage()">Click Me</button>
+  <h1>Recipe Matcher</h1>
+  <form id="recipeForm">
+    <h2>Add a Recipe</h2>
+    <input type="text" id="recipeTitle" placeholder="Recipe Name" required />
+    <textarea id="recipeIngredients" placeholder="Ingredients (comma-separated)" required></textarea>
+    <textarea id="recipeSteps" placeholder="Steps" required></textarea>
+    <button type="submit">Add Recipe</button>
+  </form>
+
+  <h2>Your Pantry</h2>
+  <input type="text" id="pantryItem" placeholder="Add Ingredient" />
+  <button id="addIngredient">Add to Pantry</button>
+  <ul id="pantryList"></ul>
+
+  <h2>Recipe Suggestions</h2>
+  <ul id="recipeSuggestions"></ul>
+
   <script src="script.js"></script>
 </body>
 </html>
